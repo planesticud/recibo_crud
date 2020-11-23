@@ -15,6 +15,7 @@ steps:
 - name: build
   image: golang:1.9
   commands:
+  - go get github.com/astaxie/beego@v1.12.3
   - go get -t
   - GOOS=linux GOARCH=amd64 go build -o main
   - go get -u gopkg.in/alecthomas/gometalinter.v1
